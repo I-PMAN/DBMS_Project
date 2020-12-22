@@ -1,18 +1,15 @@
 <?php
-session_start();
 require "dbcon.php";
 $username = filter_input(INPUT_POST, 'username');
 $password = filter_input(INPUT_POST, 'password');
-
-//$hash_pass=password_hash($password,PASSWORD_DEFAULT);
-
+ 
 $query = mysqli_query($conn, "SELECT * FROM user WHERE username = '$username'");
 if(mysqli_num_rows($query) > 0){
   $row = mysqli_fetch_assoc($query);
   $user_db_pass = $row['pword'];
   if($password === $user_db_pass){
     session_regenerate_id();
-    $_SESSION['cookies_name'] =  $row['username'];  
+    $_SESSION["username"] = $username;  
     header('Location: test1.php');
     exit;
   }
