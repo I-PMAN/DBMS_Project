@@ -18,6 +18,9 @@ session_start();
       <div class="right">
         <button type="button" name="button" class="button button2">Remove a Movie</button>
         </div>
+        <div class="center">
+          <button type="button" name="button" class="button button3">Edit a Movie</button>
+          </div>
      </div>
     </div>
   </body>
