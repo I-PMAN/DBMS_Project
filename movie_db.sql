@@ -2,8 +2,8 @@
 -- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Dec 20, 2020 at 08:40 AM
+-- Host: 127.0.0.1
+-- Generation Time: Dec 26, 2020 at 12:04 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -34,6 +34,18 @@ CREATE TABLE `admi` (
   `pword` varchar(80) NOT NULL,
   `phone` int(10) NOT NULL,
   `email` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `movie`
+--
+
+CREATE TABLE `movie` (
+  `Name` text NOT NULL,
+  `Language` char(10) NOT NULL,
+  `Genre` char(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -94,7 +106,7 @@ ALTER TABLE `admi`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
