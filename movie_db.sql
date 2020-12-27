@@ -1,7 +1,6 @@
 -- phpMyAdmin SQL Dump
 -- version 5.0.3
 -- https://www.phpmyadmin.net/
---
 -- Host: localhost
 -- Generation Time: Dec 20, 2020 at 08:40 AM
 -- Server version: 10.4.14-MariaDB
@@ -39,6 +38,17 @@ CREATE TABLE `admi` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `movie`
+--
+
+CREATE TABLE `movie` (
+  `Name` text NOT NULL,
+  `Language` char(10) NOT NULL,
+  `Genre` char(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
 -- Table structure for table `user`
 --
 
@@ -94,6 +104,7 @@ ALTER TABLE `admi`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
+
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
