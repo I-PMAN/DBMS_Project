@@ -23,7 +23,6 @@ session_start();
      <option value="English">English</option>
      <option value="Hindi">Hindi</option>
      <option value="Kannada">Kannada</option>
-     <option value="Tamil">Tamil</option>
    </select><br></br>
     <button type="submit">Create</button>
 </form>
