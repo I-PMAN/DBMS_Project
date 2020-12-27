@@ -1,9 +1,8 @@
 -- phpMyAdmin SQL Dump
 -- version 5.0.3
 -- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Dec 26, 2020 at 12:04 PM
+-- Host: localhost
+-- Generation Time: Dec 20, 2020 at 08:40 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -50,7 +49,6 @@ CREATE TABLE `movie` (
 
 -- --------------------------------------------------------
 
---
 -- Table structure for table `user`
 --
 
@@ -106,7 +104,8 @@ ALTER TABLE `admi`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

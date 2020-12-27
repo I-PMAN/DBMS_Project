@@ -86,22 +86,3 @@ input{
   background-color: green;
   color: white;
 }
-.button3{
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border: 2px solid blue;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 1s;
-  cursor: pointer;
-}
-.button3:hover {
-  background-color: blue;
-  color: white;
-}
-.Movie_details{
-  text-align: center;
-  font-size: 40px;
-  font-style: monospace;
-}
