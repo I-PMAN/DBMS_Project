@@ -16,10 +16,14 @@ session_start();
   <form action="AddMovieQ.php" method="POST" class="inputform">
      <label for="Name">Movie Name:</label>
     <input type="text" id="Name" name="Name" placeholder="Name" required><br></br>
-     <label for="Genre">Language:</label>
-    <input type="text" id="Langauge" name="Langauge" placeholder="Language" required><br></br>
-     <label for="Language">Genre:</label>
-     <input type="text" id="Genre" name="Genre" placeholder="Genre" required><br></br>
+     <label for="Genre">Genre:</label>
+    <input type="text" id="Genre" name="Genre" placeholder="Genre" required><br></br>
+     <label for="Language">Language:</label>
+     <select id="Language" name="Language">
+     <option value="English">English</option>
+     <option value="Hindi">Hindi</option>
+     <option value="Kannada">Kannada</option>
+   </select><br></br>
     <button type="submit">Create</button>
 </form>
 

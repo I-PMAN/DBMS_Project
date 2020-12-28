@@ -13,7 +13,7 @@ if(mysqli_num_rows($query) > 0){
   if($password === $user_db_pass){
     //session_regenerate_id();
     //$_SESSION['cookies_name'] =  $row['username'];  
-    header('Location: .php');
+    header('Location: AdminPage.php');
     exit;
   }
   else{

@@ -5,7 +5,7 @@ session_start();
 <html>
 <link rel="stylesheet" href="styles.css">
   <body>
-    <div class="user_login">
+    <div class="user_login" >
       <form action="UserLogQ.php" method="POST" class="inputform">
         <img src="laptop-user.png"><br></br>
         <input type="text" id="username" name="username" placeholder="username" required><br></br>

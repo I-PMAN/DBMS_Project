@@ -8,7 +8,7 @@ session_start();
     <title>Movie and Chill</title>
   </head>
   <body>
-  <div class="left">  
+  <div class="user_login">  
 	<form action="UserRegQ.php" method="POST" class="inputform">
   <img src="laptop-user.png"><br></br>
   <input type="text" id="fullname" name="fullname" placeholder="fullname" required/><br></br>
@@ -20,7 +20,7 @@ session_start();
    <input type="submit" value="Register"/>
   </form>
 </div>
-<div class="right">
+<div class="user_login">
 <form action="UserLogPage.php" class="inputform">
 <p>Already an user?</p>
 <input type="submit" value="Login">

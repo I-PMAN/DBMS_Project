@@ -10,8 +10,12 @@ if(mysqli_num_rows($query) > 0){
   $user_db_pass = $row['pword'];
   if($password === $user_db_pass){
     session_regenerate_id();
-    $_SESSION["username"] = $username;  
-    header('Location: test1.php');
+
+    $sql1 = mysqli_query($conn, "SELECT user_id FROM user WHERE username='$username'");
+    $row1 = mysqli_fetch_array($sql1);
+    $_SESSION["session_user"]= $row1["user_id"];
+
+    header('Location: movie_select.php');
     exit;
   }
   else{

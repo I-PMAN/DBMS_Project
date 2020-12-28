@@ -11,8 +11,7 @@ while($row = mysqli_fetch_array($sql)){
 <html>
 <link rel="stylesheet" href="styles.css">
 <body>
-
-<div class="form_display">
+<div class="form_display" id="grad">
 <form action="" method="POST" id="movie_form">
 
 <div>
@@ -59,19 +58,6 @@ while($row = mysqli_fetch_array($sql)){
 <input type="submit" value="select" class="submit">
 </form>
 </div>
-
-<div>
-<input type="button" value="Book" onclick="book_ticket()">
-</div>
-<!--checking if all fileds are selected -->
-<?php if(!empty($seat_select) && !empty($movie_select) && !empty($date_select) && !empty($time_select))
-{ ?>
-  <script>
-  book_ticket = function(){
-  window.location="test1.php"
-  }</script>
-<?php } ?>
-
 <?php
 // ###getting selected values from form###
 $date_select = filter_input(INPUT_POST, 'date_select');
@@ -80,24 +66,31 @@ $movie_select = filter_input(INPUT_POST, 'movie_select');
 $seat_select = filter_input(INPUT_POST, 'seat_select');
 // ###Mandatory to place this here###
 ?>
-
+<!-- collecting data from user and keepting them in session variables -->
 <div class="show_display">
 <h4>Selection will be displayed here</h4>
-<h4>Movie: <?php echo $movie_select; ?> </h4>
-<h4>Seats: <?php echo $seat_select; ?> </h4>
-<h4>Date: <?php echo $date_select; ?> </h4>
-<h4>Time: <?php echo $time_select; ?> </h4>
-</div> 
+<h4>Movie: <?php echo $movie_select; $_SESSION["session_movie"] = $movie_select; ?> </h4>
+<h4>Seats: <?php echo $seat_select; $_SESSION["session_seat"] = $seat_select;  ?> </h4>
+<h4>Date: <?php echo $date_select; $_SESSION["session_date"] = $date_select;  ?> </h4>
+<h4>Time: <?php echo $time_select; $_SESSION["session_time"] = $time_select;  ?> </h4>
+</div>
+<div>
+<input type="button" value="Book" onclick="book_ticket()" href="movie_selectQ.php">
+</div>
+<!--checking if all fileds are selected -->
+<?php if(!empty($seat_select) && !empty($movie_select) && !empty($date_select) && !empty($time_select))
+{ ?>
+  <script>
+  book_ticket = function(){
+  window.location="movie_selectQ.php"
+  }</script>
+<?php } ?> 
 </body>
 </html>
 
 <?php 
-$test='8';
-$sql2=mysqli_query($conn,"SELECT count(*) as total from seats WHERE date_time='2020-12-22 13:00:00' and id='$test'");
-$row2=mysqli_fetch_assoc($sql2);
-echo $row2['total'];
-
-/* $sql1 = mysqli_query($conn, "SELECT * FROM seats WHERE date_time='2020-12-22 10:00:00'");
+/*
+ $sql1 = mysqli_query($conn, "SELECT * FROM seats WHERE date_time='2020-12-22 10:00:00'");
 while($row1 = mysqli_fetch_array($sql1)){
   $seat_s[] = $row1['seat_no'];
 }
@@ -105,6 +98,4 @@ foreach($seat_s as $seat_ss){
   echo $seat_ss;
 }
 */
-
-
 ?>

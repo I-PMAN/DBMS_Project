@@ -14,7 +14,7 @@ $sql = "INSERT INTO user (fullname, username, pword, phone, email)
 values ('$fullname','$username','$password','$phone','$email')";
     if ($conn->query($sql)){
         echo '<script>alert("Registration Successful")</script>';
-        header("Location: user_page.php");
+        header("Location: UserLogPage.php");
     }
     else{
         echo "Error: ". $sql ."". $conn->error;

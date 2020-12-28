@@ -6,7 +6,7 @@ session_start();
 <link rel="stylesheet" href="styles.css">
   <body>
     <div class="user_login">
-      <form action="test2.php" method="POST" class="inputform">
+      <form action="AdminLogQ.php" method="POST" class="inputform">
         <img src="laptop-user.png">
         <p>Admin Login</p>
         <input type="text" id="username" name="username" placeholder="username" required><br></br>
