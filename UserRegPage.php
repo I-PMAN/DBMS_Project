@@ -3,6 +3,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html>
+<?php include('navbar1.html'); ?>
 <link rel="stylesheet" href="styles.css">
   <head>
     <title>Movie and Chill</title>

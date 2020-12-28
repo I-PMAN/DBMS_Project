@@ -16,6 +16,6 @@ if (ini_get("session.use_cookies")) {
 
 // Finally, destroy the session.
 session_destroy();
-header("Location: index.php");
+header("Location: index.html");
 exit;
 ?>

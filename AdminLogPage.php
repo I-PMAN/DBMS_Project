@@ -1,13 +1,10 @@
-<?php
+<?php 
 session_start();
 ?>
 <!DOCTYPE html>
 <html>
+<?php include('navbar1.html'); ?>
 <link rel="stylesheet" href="styles.css">
-<head>
-  <meta charset="utf-8">
-  <title>Admin Login</title>
-</head>
   <body>
     <div class="user_login">
       <form action="AdminLogQ.php" method="POST" class="inputform">
@@ -18,10 +15,10 @@ session_start();
         <button type="submit">Login</button>
       </form>
     </div>
-    <div class="inputform" style="padding:200px 200px 0px 0px; width:300px; float:right;">
+    <div class="inputform" style="padding:200px 200px 0px 0px; width:500px; float:right;">
       <img src="caution.png" class="cautionImg">
       <p>This page is restricted for users </p>
     </div>
-
+    
   </body>
 </html>
