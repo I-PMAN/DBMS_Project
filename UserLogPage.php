@@ -1,9 +1,13 @@
-<?php 
+<?php
 session_start();
 ?>
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" href="styles.css">
+<head>
+  <meta charset="utf-8">
+  <title>User Login</title>
+</head>
   <body>
     <div class="user_login" >
       <form action="UserLogQ.php" method="POST" class="inputform">

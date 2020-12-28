@@ -1,9 +1,13 @@
-<?php 
+<?php
 session_start();
 ?>
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" href="styles.css">
+<head>
+  <meta charset="utf-8">
+  <title>Admin Login</title>
+</head>
   <body>
     <div class="user_login">
       <form action="AdminLogQ.php" method="POST" class="inputform">
@@ -18,6 +22,6 @@ session_start();
       <img src="caution.png" class="cautionImg">
       <p>This page is restricted for users </p>
     </div>
-    
+
   </body>
 </html>
