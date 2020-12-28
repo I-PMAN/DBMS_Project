@@ -10,21 +10,18 @@ session_start();
   </head>
   <body>
 <div class="Movie_details">
-  <h1>Enter movie details.</h1>
+  <h1 style="text-align:center;margin-top:70px;">Enter movie details.</h1><br>
 </div>
 <div class="form">
   <form action="AddMovieQ.php" method="POST" class="inputform">
-     <label for="Name">Movie Name:</label>
+     <label for="Name"></label>
     <input type="text" id="Name" name="Name" placeholder="Name" required><br></br>
-     <label for="Genre">Genre:</label>
+     <label for="Genre"></label>
     <input type="text" id="Genre" name="Genre" placeholder="Genre" required><br></br>
-     <label for="Language">Language:</label>
-     <select id="Language" name="Language">
-     <option value="English">English</option>
-     <option value="Hindi">Hindi</option>
-     <option value="Kannada">Kannada</option>
-   </select><br></br>
-    <button type="submit">Create</button>
+     <label for="Language"></label>
+     <input id="Language" name="Language" placeholder="Language" required>
+     <br></br>
+    <button type="submit" style="height:30px; width:80px; border-radius:7px;">Create</button>
 </form>
 
 </div>
