@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 28, 2020 at 05:44 AM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.0
+-- Generation Time: Dec 28, 2020 at 02:09 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -88,6 +88,20 @@ INSERT INTO `seats` (`seat_id`, `date_time`, `movie_id`, `user_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `ticket`
+--
+
+CREATE TABLE `ticket` (
+  `ticket_no` int(11) NOT NULL,
+  `movie_name` varchar(20) DEFAULT NULL,
+  `language` varchar(20) DEFAULT NULL,
+  `show_time` datetime DEFAULT NULL,
+  `no_of_seats` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -134,6 +148,12 @@ ALTER TABLE `movie`
 ALTER TABLE `seats`
   ADD PRIMARY KEY (`seat_id`),
   ADD KEY `movie_id` (`movie_id`);
+
+--
+-- Indexes for table `ticket`
+--
+ALTER TABLE `ticket`
+  ADD PRIMARY KEY (`ticket_no`);
 
 --
 -- Indexes for table `user`
